@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="socket.io.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body onload="getProfile(); getTweets()">
+
+    <div>
+        <h1>Chat App</h1>
+        
+       
+        <button class="logout" onclick="return logout()">Log out</button>
+    </div>
+
+    
+   
+
+
+        <section>
+            <div class="upload">
+                <form onsubmit="return upload()">
+            
+                    <img src=""  id="profilePic" style="border-radius: 50%; width: 200px; height: 200px;" >
+                    <br>
+                    <div class="profile">
+                        <div id="userName"></div>
+                        <div id="userEmail"></div>
+                        <div id="userPhone"></div>
+                    </div>
+                    <br>
+                    <input required type="file" id="fileInput" onchange="previewFile()">
+                     <div class="profile">
+        <div id="userName"></div>
+        <div id="userEmail"></div>
+        <div id="userPhone"></div>
+    </div>
+
+                    <button type="submit"> Upload </button>
+                </form>            
+                <button class="logout"><a href="profile.html">Profile</a> </button>
+            </div>
+            <div class="chatpp">
+                <div>
+                    <input type="text" name="" id="message" style="margin:5px ;" placeholder="Type your message....">
+                    <button class="post" onclick=" return tweet()">Post</button>
+                    
+                </div>
+                <div id="text-area">
+                    <div class="tweet"></div>
+                        <p class="user-name">Sultan
+                        <p>
+                        <p class="tweet-date">12-12-2020</p>
+                        <p class="tweet-text"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <div >
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

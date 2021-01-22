@@ -1,0 +1,156 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+body{
+    margin: 25px;
+    padding: 0px;
+    background-color: #393e46;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin: 40px;
+    
+
+}
+.myprofile{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+p{
+    color: white;
+
+}
+.profile{
+    color: white;
+}
+
+.upload{
+    width: 30%;
+    float: left;
+    height: 80vh;
+    background-color: #222831;
+    border-radius: 50px;
+    /* margin-right: 10px; */
+}
+.chatpp{
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    background-color: #222831;
+    width:50%;
+    padding: 10px;
+    margin: 50px 50px 50px;
+    
+    height: auto;
+    float:  right;
+    text-align: center;
+}
+.logout{
+    display: block;
+    float: right;
+    width: 100px;
+    height: 50px;
+    margin-right: 50px;
+    border-radius:10px;
+    border: none;
+    box-shadow: 5px 3px 20px rgb(2, 55, 231);
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+.tweet{
+    box-shadow: 5px 3px 10px #158bc2;
+    border-radius: 10px;
+    margin: 10px 0px 10px 0px;
+   
+    
+}
+#text-area{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.tweet-text{
+    color: #ffffff;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: inline;
+}
+.user-name{
+    font-size: 22px;
+    color: #fbfbfb
+        
+};
+
+.tweet-date{
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: white;
+}
+
+.post{
+    width: 90px;
+    height: 40px;
+    border-radius:10px;
+    border: none;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    
+}
+
+input{
+    
+    height: 40px;
+    margin:0px 20px 5px 0px;
+    border-radius:10px;
+    border: none;
+    width: 280px;
+    padding: 15px;
+    background-color: #f5f5f5;
+}
+
+::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 1; 
+  }
+
+  button:hover{
+    background-color:#158bc2 ;
+    color: white; 
+    box-shadow: 5px 3px 20px rgb(0, 0, 0);
+  }
+
+
+
+img{
+    margin-left: 50px;
+}
+
+
+#profilePic{
+    
+margin-right: 600px;
+}
+
+
+#fileInput{
+    height: 40px;
+    margin: 0px 20px 5px 0px;
+    border-radius: 30px;
+    border: none;
+    width: px;
+    padding: 15px;
+    background-color: #222831;
+}
