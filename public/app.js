@@ -1,5 +1,6 @@
 // const url = 'http://localhost:5000'
-const url = ''
+
+const url = "https://chat-app-sultan.herokuapp.com"
 var socket = io(url);
 socket.on('connect', function () {
     console.log("connected")
