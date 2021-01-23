@@ -8,7 +8,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    background-color: #1d505593;
+    background-color: #393e46;
 }
 
 p{
@@ -19,7 +19,8 @@ p{
 .form{
     /* border: 1px solid black; */
     border-radius: 10px;
-    background-color: rgba(27, 59, 50, 0.746);
+    background-color: #222831;
+
     display: inline-block;
     width: 300px;
     padding: 10px;
@@ -35,6 +36,7 @@ p{
     font-weight: bold;
     font-size: 22px;
     margin-bottom: 20px;
+    color: white;
 }
 input{
     margin:10px 0px 20px 0px  ;
@@ -65,11 +67,14 @@ button{
 
 
 a{
-    color: #000000;
+    background-color: red;
+    color: white;
     text-decoration: none;
     text-align: center;
     display: block;
     margin-top: 10px;
+    margin: 12px 86px 4px 79px;
+    padding: 4px 5px 5px 10px;
 }
 button:hover{
     background-color:#158bc2 ;

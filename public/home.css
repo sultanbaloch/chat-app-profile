@@ -72,19 +72,22 @@ p{
     box-shadow: 5px 3px 10px #158bc2;
     border-radius: 10px;
     margin: 10px 0px 10px 0px;
+    padding: 10px;
+    
    
     
 }
-#text-area{
+#text-area, #usertext-area{
     display: flex;
     flex-direction: column-reverse;
+    
 }
 .tweet-text{
     color: #ffffff;
     font-size: 22px;
     font-family: sans-serif;
     font-weight: bold;
-    display: inline;
+
 }
 .user-name{
     font-size: 22px;
@@ -98,6 +101,7 @@ p{
     font-weight: bold;
     color: white;
     background-color: white;
+    float: left;
 }
 
 .post{
@@ -141,7 +145,7 @@ img{
 
 #profilePic{
     
-margin-right: 600px;
+margin-right: 16px;
 }
 
 

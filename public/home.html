@@ -14,59 +14,59 @@
 
 <body onload="getProfile(); getTweets()">
 
+    <h1>Twitter-Share Your Thoughts</h1>
     <div>
-        <h1>Chat App</h1>
-        
-       
+
+
         <button class="logout" onclick="return logout()">Log out</button>
     </div>
 
-    
-   
 
 
-        <section>
-            <div class="upload">
-                <form onsubmit="return upload()">
-            
-                    <img src=""  id="profilePic" style="border-radius: 50%; width: 200px; height: 200px;" >
-                    <br>
-                    <div class="profile">
-                        <div id="userName"></div>
-                        <div id="userEmail"></div>
-                        <div id="userPhone"></div>
-                    </div>
-                    <br>
-                    <input required type="file" id="fileInput" onchange="previewFile()">
-                     <div class="profile">
-        <div id="userName"></div>
-        <div id="userEmail"></div>
-        <div id="userPhone"></div>
-    </div>
 
-                    <button type="submit"> Upload </button>
-                </form>            
-                <button class="logout"><a href="profile.html">Profile</a> </button>
-            </div>
-            <div class="chatpp">
-                <div>
-                    <input type="text" name="" id="message" style="margin:5px ;" placeholder="Type your message....">
-                    <button class="post" onclick=" return tweet()">Post</button>
-                    
+
+    <section>
+        <div class="upload">
+            <form onsubmit="return upload()">
+
+                <img src="" id="profilePic" style="border-radius: 50%; width: 200px; height: 200px;">
+
+                <br>
+                <div class="profile">
+                    <div id="userName"></div>
+                    <div id="userEmail"></div>
+                    <div id="userPhone"></div>
                 </div>
-                <div id="text-area">
-                    <div class="tweet"></div>
-                        <p class="user-name">Sultan
-                        <p>
-                        <p class="tweet-date">12-12-2020</p>
-                        <p class="tweet-text"></p>
-                    </div>
+                <br>
+                <input required type="file" id="fileInput" onchange="previewFile()">
+                <div class="profile">
+                    <div id="userName"></div>
+                    <div id="userEmail"></div>
+                    <div id="userPhone"></div>
                 </div>
+
+                <button type="submit"> Upload </button>
+            </form>
+            <button class="logout"><a href="profile.html">Profile</a> </button>
+        </div>
+        <div class="chatpp">
+            <div>
+                <input type="text" name="" id="message" style="margin:5px ;" placeholder="Type your message....">
+                <button class="post" onclick=" return tweet()">Post</button>
+
             </div>
-        </section>
-    
-    <div >
-        
+            <div id="text-area">
+
+
+
+
+                
+            </div>
+        </div>
+    </section>
+
+    <div>
+
     </div>
 
     <script src="app.js"></script>

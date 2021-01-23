@@ -212,13 +212,14 @@ function getTweets() {
         url: url + '/getTweets',
         credentials: 'include',
     }).then((response) => {
-        // console.log(response.data)
+        console.log(response.data)
         let tweets = response.data;
         let html = ""
         tweets.forEach(element => {
             html += `
             <div class="tweet">
-            <p class="user-name">${element.name}<p>
+            <img src="${element.profilePic}" alt="picture" style = " width : 50px ; height : 50px; background: #73AD21 ; border: 2px solid green; border-radius: 100%; ">
+            <span class="user-name">${element.name}<span>
             <p class="tweet-date">${new Date(element.createdOn).toLocaleTimeString()}</p>
             <p class="tweet-text">${element.tweet}</p>
             </div>
@@ -247,6 +248,9 @@ function getMyTweets() {
             if (element.name === userName){
                 userHtml += `
                 <div class="tweet">
+                <img src="${element.profilePic}" alt="picture" style = " width : 50px ; height : 50px; background: #73AD21 ; border: 2px solid green; border-radius: 100%; ">
+                <span class="user-name">${element.name}<span>
+                
                 <p class="user-name">${element.name}<p>
                 <p class="tweet-date">${new Date(element.createdOn).toLocaleTimeString()}</p>
                 <p class="tweet-text">${element.tweet}</p>
@@ -268,7 +272,8 @@ socket.on('NEW_POST', (newPost) => {
     let tweets = newPost;
     document.getElementById('text-area').innerHTML += `
     <div class="tweet">
-    <p>${newPost.name}<p>
+    <img src="${tweets.profilePic}" alt="picture" style = " width : 50px ; height : 50px; background: #73AD21 ; border: 2px solid green; border-radius: 100%; ">
+    <span class="user-name">${tweets.name}<span>
     <p class="tweet-date">${new Date(tweets.createdOn).toLocaleTimeString()}</p>
     <p class="tweet-text">${tweets.tweet}</p>
     </div>
@@ -279,10 +284,6 @@ socket.on('NEW_POST', (newPost) => {
 function upload() {
 
     var fileInput = document.getElementById("fileInput");
-
-    
-
-  
 
     console.log("fileInput: ", fileInput);
     console.log("fileInput: ", fileInput.files[0]);
@@ -310,9 +311,6 @@ function upload() {
             console.log(`upload Success` + res.data);
             console.log(res.data.picture)
 
-            var src = res.data.picture
-
-          document.getElementById("profilePic").src = src;
         })
         .catch(err => {
             console.log(err);

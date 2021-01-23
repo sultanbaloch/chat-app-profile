@@ -3,11 +3,10 @@ var bcrypt = require("bcrypt-inzi");
 var jwt = require('jsonwebtoken');
 var postmark = require("postmark");
 var { SERVER_SECRET } = require("../core/index");
-var token = process.env.EMAIL_API
+var token = process.env.EMAIL_API;
 
 var client = new postmark.Client(token);
 
-var SERVICE_ACCOUNT = process.env.SERVICE_ACCOUNT
 
 var { userModle, otpModel } = require("../dbrepo/modles");
 console.log("userModle: ", userModle)
@@ -51,6 +50,7 @@ api.post('/signup', (req, res, next) => {
                     "email": req.body.userEmail,
                     "password": HashPassword,
                     "phone": req.body.userPhone,
+                    
                 });
 
                 newUaser.save((err, data) => {

@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 
 
 // let dbURI = 'mongodb://localhost:27017/abc-database';
-let dbURI = "mongodb+srv://pak:pak@cluster0.hrkro.mongodb.net/pak?retryWrites=true&w=majority"
+let dbURI = process.env.dbURI
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
@@ -65,6 +65,7 @@ var tweetSchema = new mongoose.Schema({
     "tweet": String,
     "name": String,
     "email": String,
+    "profilePic":String,
     "createdOn": { "type": Date, "default": Date.now },
 });
 var tweetmodel = mongoose.model("tweet", tweetSchema);
