@@ -38,7 +38,7 @@ var upload = multer({
 
 const admin = require("firebase-admin");
 
-var serviceAccount = process.env.SERVICE_ACCOUNT
+var serviceAccount = JSON.stringify(process.env.SERVICE_ACCOUNT) 
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
