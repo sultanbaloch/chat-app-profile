@@ -2,7 +2,7 @@ var express = require('express');
 var bcrypt = require("bcrypt-inzi");
 var jwt = require('jsonwebtoken');
 var postmark = require("postmark");
-var { SERVER_SECRET } = require("../core/index");
+var { SERVER_SECRET } = require("./../core/index");
 var token = process.env.EMAIL_API;
 
 var client = new postmark.Client(token);

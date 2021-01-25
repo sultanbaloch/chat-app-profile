@@ -25,7 +25,7 @@ const fs = require('fs')
 
 //==============================================
 const multer = require('multer')
-const storage = multer.diskStorage({ // https://www.npmjs.com/package/multer#diskstorage
+const storage = multer.diskStorage({ 
     destination: './uploads/',
     filename: function (req, file, cb) {
         cb(null, `${new Date().getTime()}-${file.filename}.${file.mimetype.split("/")[1]}`)
@@ -38,7 +38,7 @@ var upload = multer({
 
 const admin = require("firebase-admin");
 
-var serviceAccount = JSON.stringify(process.env.SERVICE_ACCOUNT) 
+var serviceAccount = JSON.parse(process.env.SERVICE_ACCOUNT) 
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
